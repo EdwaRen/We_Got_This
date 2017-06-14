@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="refresh" content="1.5;url=http://www.letsgoletsgo.gq/" />
+
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            -webkit-animation: background 2s cubic-bezier(1, 0, 0, 1) infinite;
+            animation: background 2s cubic-bezier(1, 0, 0, 1) infinite;
+        }
+        
+        @font-face {
+            font-family: RalewayReg;
+            src: url("../Raleway/Raleway-Regular.ttf");
+        }
+        
+        @font-face {
+            font-family: RalewayBlk;
+            src: url("Raleway/Raleway-Black.ttf");
+        }
+        
+        @font-face {
+            font-family: RalewayBld;
+            src: url("Raleway/Raleway-Bold.ttf");
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        h2 {
+            text-align: left;
+        }
+        
+        h3 {
+            text-align: right;
+        }
+        
+        #center {
+            position: absolute;
+            margin: 0 auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 70px;
+            -webkit-animation: background 2s cubic-bezier(1, 0, 0, 1) infinite;
+            animation: background 2s cubic-bezier(1, 0, 0, 1) infinite;
+        }
+        
+        #center pre {
+            font-family: RalewayBlk;
+            text-align: center;
+        }
+        #invisible {
+            position: absolute;
+            left: -9999px;
+        }
+        
+        @-webkit-keyframes background {
+            0% {
+                background-color: #f99;
+            }
+            33% {
+                background-color: #9f9;
+            }
+            67% {
+                background-color: #99f;
+            }
+            100% {
+                background-color: #f99;
+            }
+        }
+        
+        @keyframes background {
+            0% {
+                background-color: #f99;
+            }
+            33% {
+                background-color: #9f9;
+            }
+            67% {
+                background-color: #99f;
+            }
+            100% {
+                background-color: #f99;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div id="center">
+
+        <pre>WE'VE FREAKING GOT THIS
+        </pre>
+    </div>
+    <div id = "invisible">
+        <audio controls autoplay>
+            <source src="We_Got_This.mp3" type="audio/mpeg">
+        </audio>
+        <audio controls autoplay>
+            <source src="Drums.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        var count = 70;
+        var x = setInterval(function() {
+            if (count < 78) {
+                count = count * 1.02;
+            } else {
+                count = count / 1.02;
+            }
+            var c = count + "px";
+            document.getElementById("center").style.fontSize = c;
+            console.log(count);
+        }, 150);
+
+    </script>
+
+</body>
+
+</html>
